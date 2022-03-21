@@ -20,6 +20,9 @@ body {
   grid-template-columns: repeat(4, 20vmin);
   background-color: #ccc;
   gap: 2vmin;
+  border: 1vmin;
+  padding: 2vmin;
+  position: relative;
 }
 
 .cell {
