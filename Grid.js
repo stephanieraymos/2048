@@ -7,5 +7,17 @@ export default class Grid {
     gridElement.style.setProperty("--grid-size", GRID_SIZE);
     gridElement.style.setProperty("--cell-size", `${CELL_SIZE}vmin`);
     gridElement.style.setProperty("--cell-gap", `${CELL_GAP}vmin`);
+    createCellEls(gridElement);
   }
+}
+
+function createCellEls(gridElement) {
+  const cells = [];
+  for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
+    const cell = document.createElement("div");
+    cell.classList.add("cell");
+    cells.push(cell);
+    gridElement.append(cell);
+  }
+  return cells;
 }
